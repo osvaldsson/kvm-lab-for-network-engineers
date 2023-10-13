@@ -47,9 +47,9 @@ def load_yaml_file(filename, load_all=False):
         ignore_error    (bool):     do not sys.exit on failure, but return False instead. Default - False
         debug           (bool):     print load time, default - False
         load_all        (bool):     load all YAML documents from YAML file (splitted by ---), default - False
-    
+
     Returns:
-        JSON data loaded from YAML or False   
+        JSON data loaded from YAML or False
     """
     file = open(filename, mode='r')
     if load_all:
@@ -253,11 +253,11 @@ if __name__ == "__main__":
         )
 
         create_vms_script += (
-            
+
             f"echo 'Creating {vm_name}'\n"
             f"sudo virt-install --name {vm_name} --memory {vm['memory']} --vcpus {vm['vcpus']}"
             f" --cpu {vm['cpu']} --boot {vm['boot']} --events {vm['events']} --console {vm['console']}"
-            f" --os-type {vm['os-type']} --os-variant {vm['os-variant']}"
+            f" --os-variant {vm['os-variant']}"
             f" --graphics {vm['graphics']['type']},port={vm['graphics']['port']} --wait {vm['wait']}"
         )
         for disk in vm['disk']:
