@@ -258,7 +258,7 @@ if __name__ == "__main__":
             f"sudo virt-install --name {vm_name} --memory {vm['memory']} --vcpus {vm['vcpus']}"
             f" --cpu {vm['cpu']} --boot {vm['boot']} --events {vm['events']} --console {vm['console']}"
             f" --os-variant {vm['os-variant']}"
-            f" --graphics {vm['graphics']['type']},port={vm['graphics']['port']} --wait {vm['wait']}"
+            f" --graphics {vm['graphics']['type']},port={vm['graphics']['port']} --noautoconsole"
         )
         for disk in vm['disk']:
             create_vms_script += (
