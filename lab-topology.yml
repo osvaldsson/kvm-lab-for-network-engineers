@@ -25,7 +25,7 @@ profile:
 
 vm:
 
-- name: M0
+- name: MA0
   profile: veos_lab
   graphics:
     type: vnc
@@ -44,7 +44,7 @@ vm:
   base_mac: 00:0c:29:78:01:00  # will be incremented by 1 for every connection
   connections:
     - network: {name: default}  # ma1
-    - M0     # e1
+    - MA0    # e1
     - LEAF1  # e2
     - LEAF2  # e3
     - LEAF3  # e4
@@ -58,7 +58,7 @@ vm:
   base_mac: 00:0c:29:78:02:00  # will be incremented by 1 for every connection
   connections:
     - network: {name: default}  # ma1
-    - M0     # e1
+    - MA0    # e1
     - LEAF1  # e2
     - LEAF2  # e3
     - LEAF3  # e4
